@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  {%- include head.html -%}
+
+  <body class="{{page.layout}}" style="background-color: #{{page.bgcolor}}">
+
+    {%- include header.html -%}
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+        <div class="work_page_gallery">
+        {% if page.workimages %}
+          {% for item in page.workimages %}
+            {% if forloop.first == true %}
+              <figure class="work_page_figure work_page_figure--first">
+                <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images"
+                {% if page.bordercolor %} style="border: 10px solid #{{page.bordercolor}}" {% endif %} />
+                 {% if item.caption %}
+                <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
+                 {% endif %}
+              </figure>
+              <div class="page_content_text">
+                {{ content }}
+              </div>
+            {% else %}
+          <figure class="work_page_figure">
+            <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images"
+            {% if page.bordercolor %} style="border: 10px solid #{{page.bordercolor}}" {% endif %} />
+             {% if item.caption %}
+            <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
+             {% endif %}
+          </figure>
+            {% endif %}
+          {% endfor %}
+          </div>
+        {% else %}
+          <figure class="work_page_figure">
+            <img src="/assets/img/work-featuredimg/{{page.featured_img}}" class="work_page_images work_page_images_featuredimage" />             
+          </figure>
+          </div>
+          <div class="page_content_text">
+            {{ content }}
+          </div>
+        {% endif %}
+        
+
+        {% if page.collection %}
+            {% assign links = site[page.collection] | sort:"order" | reverse %}
+        {% endif %}
+
+        {% for link in links %}
+          {% if link.title == page.title %}
+            {% unless forloop.first %}
+              {% assign prev = tmpprev %}
+            {% endunless %}
+            {% unless forloop.last %}
+              {% assign next = links[forloop.index] %}
+            {% endunless %}
+          {% endif %}
+          {% assign tmpprev = link %}
+        {% endfor %}
+
+        <ul class="prevnext">
+          <li>{% if prev %}<a class="prev" href="{{ prev.url}}">{% include arrow.svg %}</a>
+              {% else %}<a class="prev disabled" href="">{% include arrow.svg %}</a>
+              {% endif %}</li>
+          <li><a class="overview" href="{{ '/' | relative_url }}">all projects</a></li>
+          <li>{% if next %}<a class="next" href="{{ next.url}}">{% include arrow.svg %}</a>
+              {% else %}<a class="next disabled" href="">{% include arrow.svg %}</a>
+              {% endif %}</li>
+        </ul>
+
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+
+  </body>
+
+</html>

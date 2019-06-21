@@ -1,0 +1,13 @@
+<header class="site-header" role="banner">
+
+
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{%- include floter_signature.svg -%}</a>
+    
+      <nav class="site-nav">
+            <a class="page-link about-link" href="/about/">{%- include info.svg -%}</a>
+            <a class="work-close" rel="author" href="{{ '/' | relative_url }}">{%- include closex.svg -%}</a>
+      </nav>
+
+</header>
