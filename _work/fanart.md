@@ -5,7 +5,7 @@ permalink: /work/fanart
 featured_img: fanart_featured.png
 workimages:
 - src: fanart02.png
-bgcolor: 1b3a83
+bgcolor: ffb79e
 bordercolor: ffffff
 order: 6
 ---
