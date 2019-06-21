@@ -66,5 +66,4 @@ DEPENDENCIES
   jekyll-seo-tag (~> 2.1)
   tzinfo-data
 
-BUNDLED WITH
-   2.0.2
+
