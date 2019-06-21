@@ -29,3 +29,18 @@ jQuery(document).ready(function ($) {
         }
     };
 });    
+$(window).on('load', function(){  
+    TweenLite.to(".preloader", 1, {
+        autoAlpha:0,
+        onComplete: function(){$(".preloader").remove()}
+    });
+    /*TweenMax.staggerFromTo(".col-4, .col-6, .col-12, .col-8", .5, {
+        autoAlpha: 0,
+        y: -60
+    },{              
+        autoAlpha: 1,
+        y: 0,
+        ease: Back.easeOut.config( 1.7)
+    }, .05);*/
+    $("body").addClass("assets_loaded");
+});

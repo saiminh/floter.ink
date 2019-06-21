@@ -8,7 +8,8 @@
 				
 				<div class="work_list_tile work_list_tile_{{ work.title | remove: " " | remove: "." }} {{ work.worktile_theme }}">
 					<a href="{{ work.permalink }}">
-					<div class="work_list_tile_thumb" style="background-image: url(/assets/img/work-featuredimg/{{ work.featured_img }})">
+					<div class="work_list_tile_thumb"> 
+						<img class="work_list_tile_thumb_img" src="/assets/img/work-featuredimg/{{ work.featured_img }}" />
 					</div>	       					
 			      
 			      	<header class="work_list_tile_header">				      	

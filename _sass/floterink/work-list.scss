@@ -6,13 +6,14 @@ a {
 	cursor: url("/assets/img/arrow-cursor-pointer.svg"), pointer;
 }
 
-.site-header {
+.site-header{
+	position: absolute;
 	width: 100%;
-	z-index: 10;
-	position: fixed;
 }
 
 .site-title {
+	z-index: 102;
+	position: fixed;
 	display: block;
 	margin: $spacing-unit;
 	width: 128px;
@@ -31,7 +32,7 @@ a {
 	@media (min-width: 800px) {
 		top: -112px;
 		width: 192px;
-		height: 384px;
+		height: 200px;
 
 		& #floter_signature_svg {
 			position: relative;
@@ -43,6 +44,8 @@ a {
 .site-nav {
 	float: right;
 	margin: $spacing-unit;
+	position: relative;
+	z-index: 11;
 
 	& a {
 		width: 40px;
@@ -71,6 +74,18 @@ a {
 	}
 }
 
+/* main {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #FFF;
+	z-index: 2;
+
+	body.home & {
+		z-index: -1;
+	} 
+} */
+
 $worklist-spacing: 10px;
 
 .work_list {
@@ -81,12 +96,20 @@ $worklist-spacing: 10px;
 	grid-auto-rows: 0.5vw;
 	background-color: #fff;
 	margin-top: 70px;
+	/* position: absolute;
+	top: 0;
+	z-index: 1; */
 
 	@media (min-width: 800px) {
-		grid-template-columns: repeat(3, calc(33.333% - (#{$worklist-spacing} / 1.5)) );
-		grid-auto-rows: 1vw;
+		grid-template-columns: repeat(4, calc(25% - (#{$worklist-spacing} / 1.25)) );
+		grid-auto-rows: .5vw;
 		// /margin-top: 65px;
 	}
+
+	/* body:not(.home) & {
+		overflow: hidden;
+		height: calc(100vh - 70px - (2 * #{$worklist-spacing}));
+	} */
 }
 
 .work_list_tile {
@@ -153,8 +176,17 @@ $worklist-spacing: 10px;
 .work_list_tile_thumb {
 	width: 100%;
 	height: 100%;
-	background-size: cover;
-	background-position: 50% 50%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+	& img {
+		flex-shrink: 0;
+	    min-width: 100%;
+	    min-height: 100%;
+	    object-fit: cover;
+	}
 }
 
 .work .page_content_text {
@@ -328,7 +360,7 @@ $worklist-spacing: 10px;
 	@media (min-width: 800px) {
 		//width: calc(33.3333% - 2rem);
 		position: fixed;
-		z-index: 13;
+		z-index: 130;
 		right: 40px + (2 * $spacing-unit);
 		top: $spacing-unit;
 		margin-bottom: 0;
@@ -341,7 +373,8 @@ $worklist-spacing: 10px;
 }
 
 body:not(.work) .page-content {
-	margin-top: 8rem;
+	padding-top: 8rem;
+
 
 	& .wrapper {
 		max-width: 36em;
@@ -461,3 +494,4 @@ body:not(.work) .page-content {
 		}
 	}
 }
+
