@@ -6,7 +6,7 @@ featured_img: fanart_featured.png
 workimages:
 - src: fanart02.png
 bgcolor: ffb79e
-bordercolor: ffffff
+bordercolor: 101010
 order: 6
 ---
 

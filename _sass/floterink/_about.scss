@@ -7,11 +7,6 @@ body.about {
     box-sizing: border-box;
   }
 
-  & .page-content h1 {
-    font-size: 3rem;
-    letter-spacing: -.02em;
-  }
-
   & .post {
 
     @media (min-width: 800px) {

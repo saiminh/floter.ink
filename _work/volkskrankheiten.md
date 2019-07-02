@@ -5,15 +5,19 @@ permalink: /work/volkskrankheiten
 featured_img: sinking_600x600.jpg
 workimages:
 - src: krankheiten02_nikotin.png
-  caption: Nikotinsucht
+  caption: Nicotine addiction
 - src: krankheiten03_atemnot.png
+  caption: Dyspnea (shortness of breath)
 - src: krankheiten01_sodbrennen.png
+  caption: Heartburn
 - src: krankheiten04_borderline.png
+  caption: Borderine personality disorder
 bgcolor: fbc95b
-bordercolor: ffffff
+bordercolor: 111
 order: 1
 ---
 
 # Volkskrankheiten
 
-Series of posters illustrating common health problems. Pitch for a poster series for a german pharmacy magazine.
+Client: [Gary Glotz](http://gary-glotz.de/)\\
+Series of posters illustrating common health problems. 

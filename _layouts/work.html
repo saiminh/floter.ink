@@ -14,15 +14,25 @@
           {% for item in page.workimages %}
             {% if forloop.first == true %}
               <figure class="work_page_figure work_page_figure--first">
+                {% if item.include %}
+                  <div class="work_page_include">
+                  {%- include {{ item.include }} -%}
+                  </div>
+                   {% if item.caption %}
+                  <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
+                   {% endif %}
+                {% else %}
                 <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images"
                 {% if page.bordercolor %} style="border: 10px solid #{{page.bordercolor}}" {% endif %} />
                  {% if item.caption %}
                 <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
                  {% endif %}
+                 {% endif %}
               </figure>
               <div class="page_content_text">
                 {{ content }}
               </div>
+              
             {% else %}
           <figure class="work_page_figure">
             <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images"

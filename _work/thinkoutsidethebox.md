@@ -7,6 +7,6 @@ bgcolor: EDB18D
 order: 2
 ---
 
-# Think outside the box
+# To think outside the box
 
-Personal work
+You first have to create a box, and know everything inside it. Also, once you thought of something outside of it, you must accept that it is now also inside the box.

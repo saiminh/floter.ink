@@ -5,13 +5,11 @@ permalink: /work/renate
 featured_img: Renate.png
 workimages:
 - src: renate01.png
-bgcolor: 802828
-bordercolor: ffffff
-order: 8
+bgcolor: dfa8ae
+bordercolor: 111
+order: 7
 ---
 
-# Album cover for 'Renate'
+# Album cover
 
-I guess for Renate I was supposed to be what Jamie Hewlett is for the Gorillaz. 
-
-That's me in the bottom left.
+Cover for the single "Annette" by the band "Renate". They never made it to the top, but my cover was not the problem I hope.

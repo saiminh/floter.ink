@@ -14,6 +14,4 @@ order: 8
 
 # Cheesy movies
 
-Annual Riso Calendar, published by [Black Matter Editions](https://black-matter.de/)
-
-The theme for 2019 was movietitles combined with cheese.
+Illustrations for the cover and May of the annual riso calendar featuring various artists, published by [Black Matter Editions](https://black-matter.de/)
