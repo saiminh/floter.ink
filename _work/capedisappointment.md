@@ -5,10 +5,11 @@ permalink: /work/capedisappointment
 featured_img: capedisappointment_featured.png
 workimages:
 - src: capedisappointment.png
-bgcolor: ffffff
+bgcolor: f7e6dd
+bordercolor: 110000
 order: 5
 ---
 
-# Cape Disappointment
+# Settle in
 
-T-shirt Illustration for Folksinger [Aaron Semer](http://aaronsemer.com/).
+Cover Illustration for Folksinger [Aaron Semer's](http://aaronsemer.com/) single "Settle In".

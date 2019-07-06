@@ -1,15 +1,20 @@
 ---
 layout: work
-title: Seeing other people
-permalink: /work/fanart
+title: Tributes to legends
+permalink: /work/tributes
 featured_img: fanart_featured.png
 workimages:
+- src: fanart03.png
+  caption: Alex Cameron
 - src: fanart02.png
+  caption: Foxygen
+- src: fanart01.png
+  caption: Run the Jewels
 bgcolor: ffb79e
-bordercolor: 101010
+bordercolor: "000000"
 order: 6
 ---
 
-# Seeing other people 
+# Tributes to legends 
 
-Personal poster artwork for the Album 'Seeing other people' by the Band Foxygen.
+Artworks done out of appreciation for good music.

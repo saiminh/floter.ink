@@ -1,12 +1,12 @@
 ---
 layout: work
-title: Taboos 
+title: Taboo
 permalink: /work/taboo
 featured_img: taboo.png
 bgcolor: ffe19b
 order: 12
 ---
 
-# We speak about losing our minds as if it is a bad thing.
+# Taboo
 
-“I say, lose your mind. Do it purposefully. Find out who you really are beyond your thoughts and beliefs. Lose your mind, find your soul.” - Vironika Tugaleva 
+James Cook brought the word „taboo“ back from the pacific islands (from Tonga specifically). In Tongan, Maori and Fijian it is the word for „sacred“, „prohibited“, „forbidden“.
