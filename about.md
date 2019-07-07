@@ -4,10 +4,10 @@ title: about
 permalink: /about/
 ---
 
-# Simon Flöter...
+# Simon Flöter
 
-... is a German artist based in Amsterdam.
+Simon is a German artist based in Amsterdam, the Netherlands.
 
-His bold style is a result of unhealthy amounts of reading comics and watching the big bad boys do graffity.
+His bold style is a result of consuming unhealthy amounts of indie comics, violent videogames, psychedelic music and scifi movies.
 
-His unmistakable style has not done much to establish him as one of the most sought after graphic artists or even any kind of artist. So far, Simon's clients mostly aren't big brands but the beerstore around the corner.
+Strange fact: Simon can't [woot](https://www.merriam-webster.com/dictionary/woot). That's why so many of his images depict screaming figures.

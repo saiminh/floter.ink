@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-
+    $(".la-anim-13").addClass("la-animate");
     var slideCount = $('.work_page_gallery figure').length;
     var counter = 1;
     
@@ -32,7 +32,10 @@ jQuery(document).ready(function ($) {
 $(window).on('load', function(){  
     TweenLite.to(".preloader", 1, {
         autoAlpha:0,
-        onComplete: function(){$(".preloader").remove()}
+        onComplete: function(){
+            $(".la-anim-13").removeClass("la-animate");
+            $(".preloader").remove();
+        }
     });
     /*TweenMax.staggerFromTo(".col-4, .col-6, .col-12, .col-8", .5, {
         autoAlpha: 0,
