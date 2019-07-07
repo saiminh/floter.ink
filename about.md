@@ -8,6 +8,6 @@ permalink: /about/
 
 Simon is a German artist based in Amsterdam, the Netherlands.
 
-His bold style is a result of consuming unhealthy amounts of indie comics, violent videogames, psychedelic music and scifi movies.
+His bold style is a result of consuming unhealthy amounts of cartoons and comics, violent videogames, psychedelic music and scifi movies.
 
-Strange fact: Simon can't [woot](https://www.merriam-webster.com/dictionary/woot). That's why so many of his images depict screaming figures.
+For any questions or inquiries about commissions or representation please write an email to [simon@floter.ink](mailto:simon@floter.ink).
