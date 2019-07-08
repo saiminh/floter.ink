@@ -2,7 +2,7 @@
 layout: work
 title: Loose your head
 permalink: /work/smoke
-featured_img: Smoke-head_Sun600x600.jpg
+featured_img: Smoke-head_Sun600x600.png
 bgcolor: ffe969
 order: 5
 ---

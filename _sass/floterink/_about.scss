@@ -14,6 +14,28 @@ body.about {
     }
   }
 
+  & .about-portrait {
+
+    @media (min-width: 1000px) {
+     
+      margin: 0 (2 * $spacing-unit) 0 (2 * $spacing-unit);
+      max-width: 33.3%;
+    }
+
+    @media (max-width: 800px) {
+      margin-left:-$spacing-unit;
+      margin-right:-$spacing-unit;
+      margin-top: calc(-4rem - #{$spacing-unit});
+      max-height: 55vh;
+      overflow: hidden;
+    }
+
+    & img {
+       width: 100%;
+       margin: $spacing-unit auto;
+    }
+  }
+
   & .post-content {
     @media (min-width: 800px) {
       flex-basis: 66.666%;

@@ -137,6 +137,9 @@ $worklist-spacing: 10px;
 		&:nth-child(2){
 			grid-row-end: span 40;
 		}
+		&:nth-child(6){
+			grid-row-end: span 40;
+		}
 	}
 
 	& .work_list_tile_header {
@@ -406,7 +409,7 @@ $worklist-spacing: 10px;
 }
 
 body:not(.work) .page-content {
-	padding-top: 8rem;
+	padding-top: 4rem;
 
 
 	& .wrapper {
@@ -415,10 +418,12 @@ body:not(.work) .page-content {
 	}
 
 	& .post-title,
-	& h1 {
+	& h1,
+	& h2 {
 		line-height: 1.2;
 		font-size: 1.5rem;
-		//letter-spacing: -.01em;
+		margin-top: $spacing-unit;
+
 		@media (min-width: 800px) {
 			font-size: 2rem;
 		}
