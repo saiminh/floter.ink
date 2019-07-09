@@ -1,7 +1,7 @@
 ---
 layout: work
 title: Animal kingdom 
-permalink: /work/witch
+permalink: /work/zoo
 featured_img: zoo.png
 workimages:
 - src: zoo.png
