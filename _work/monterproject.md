@@ -9,7 +9,7 @@ workimages:
   caption: “It’s a monkey covered in toilet paper with a stopwatch tail and his head is on fire” - Joshua (11 years)
 - src: monsterproject01.png
 bgcolor: ff522e
-order: 16
+order: 17
 ---
 
 # themonsterproject.org

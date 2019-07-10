@@ -4,7 +4,7 @@ title: Taboo
 permalink: /work/taboo
 featured_img: taboo.png
 bgcolor: ffe19b
-order: 12
+order: 13
 ---
 
 # Taboo

@@ -7,7 +7,7 @@ workimages:
 - src: unicornpunch.png
 bgcolor: ff522e
 bordercolor: "f8e2ce"
-order: 2
+order: 6
 ---
 
 # Punching your Unicorn

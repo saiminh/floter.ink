@@ -9,7 +9,7 @@ workimages:
 - src: couchballs_03.gif
 bgcolor: 5d6f5a
 bordercolor: 101010
-order: 6
+order: 2
 ---
 
 # Couchballs 

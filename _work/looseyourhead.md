@@ -4,7 +4,7 @@ title: Loose your head
 permalink: /work/smoke
 featured_img: Smoke-head_Sun600x600.png
 bgcolor: ffe969
-order: 5
+order: 9
 ---
 
 # We speak about losing our minds as if it is a bad thing.

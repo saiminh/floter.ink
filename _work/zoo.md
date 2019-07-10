@@ -7,7 +7,7 @@ workimages:
 - src: zoo.png
 bgcolor: f4d2be
 bordercolor: "FFFFFF"
-order: 15
+order: 4
 ---
 
 # Animal Kingdom
