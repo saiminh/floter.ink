@@ -1,4 +1,5 @@
 ---
+no-show: yes
 layout: work
 title: Cape Disappointment
 permalink: /work/capedisappointment

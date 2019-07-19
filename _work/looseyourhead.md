@@ -1,6 +1,6 @@
 ---
 layout: work
-title: Loose your head
+title: Loose your mind
 permalink: /work/smoke
 featured_img: Smoke-head_Sun600x600.png
 bgcolor: ffe969

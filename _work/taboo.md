@@ -3,10 +3,14 @@ layout: work
 title: Taboo
 permalink: /work/taboo
 featured_img: taboo.png
+workimages:
+ - src: taboo.png
 bgcolor: ffe19b
+bordercolor: "000000"
 order: 13
 ---
 
 # Taboo
 
-James Cook brought the word „taboo“ back from the pacific islands (from Tonga specifically). In Tongan, Maori and Fijian it is the word for „sacred“, „prohibited“, „forbidden“.
+Submission to [Reclaim 2019](https://www.reclaim-award.org/en/) \\
+Reclaim is an initiative that replaces advertising on billboards in public spaces with art.

@@ -3,7 +3,7 @@
 	<div class="row work_list">
 		{% assign sorted_work = site.work | sort:"order" | reverse %}
 		{% for work in sorted_work %}
-			
+			{% unless work.no-show %}
 			{% unless page.id == work.id %}
 				
 				<div class="work_list_tile work_list_tile_{{ work.title | remove: " " | remove: "." }} {{ work.worktile_theme }}">
@@ -20,7 +20,7 @@
 			    </div>
 
 			{% endunless %}
-
+			{% endunless %}
 	    {% endfor %}
 	</div>
 </div>
