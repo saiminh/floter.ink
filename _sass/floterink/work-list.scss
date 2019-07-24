@@ -17,11 +17,11 @@ a {
 	position: fixed;
 	display: block;
 	margin: $spacing-unit;
-	width: 128px;
-	height: 160px;
+	width: 148px;
+	height: 180px;
 	float: left;
 	position: fixed;
-	top: -70px;
+	top: -90px;
 	left: -15px;
 
 	& #floter_signature_svg {
@@ -31,8 +31,8 @@ a {
 	}
 
 	@media (min-width: 800px) {
-		top: -112px;
-		width: 192px;
+		top: -130px;
+		width: 222px;
 		height: 200px;
 
 		& #floter_signature_svg {
@@ -67,34 +67,38 @@ a {
 .site-nav .work-close {
 	display: none;
 
-	.work &,
-	.about & {
+	.work &{
 		display: inline-block;
 	}
 }
 
-.site-nav .about-link {
-	.work &,
-	.about & {
+.site-nav .nav-link {
+	width: auto;
+	margin: 0;
+	font-size: 1.2rem;
+	line-height: 1;
+	margin-top: 5px;
+
+	&:first-child {
+		padding-right: .55rem;
+		margin-right: .5rem;
+		border-right: 2px solid;
+	}
+
+	@media (min-width: 800px) {
+		font-size: 1.3rem;
+		margin-top: 10px;
+	}
+
+	.work & {
 		display: none;
 	}
 }
 
-/* main {
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-	background-color: #FFF;
-	z-index: 2;
-
-	body.home & {
-		z-index: -1;
-	} 
-} */
-
 $worklist-spacing: 10px;
 
 .work_list {
+	margin-top: 60px;
 	padding: $worklist-spacing;
 	display: grid;
 	grid-gap: $worklist-spacing;
@@ -103,6 +107,7 @@ $worklist-spacing: 10px;
 	background-color: #fff;
 
 	@media (min-width: 800px) {
+		margin-top: 70px;
 		grid-template-columns: repeat(4, calc(25% - (#{$worklist-spacing} / 1.25)) );
 		//grid-auto-rows: calc(25% - (#{$worklist-spacing} / 1.25));
 	}
@@ -138,7 +143,8 @@ $worklist-spacing: 10px;
 	}
 
 	@media (min-width: 1200px) {
-		&:nth-child(13){
+		&:nth-child(13),
+		&:nth-child(15) {
 			grid-row-end: span 40;
 			grid-column-end: span 2;
 		}

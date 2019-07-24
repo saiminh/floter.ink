@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Couchballs
+description: Artwork for a series of animated shorts that depict famous people watching football together.
 permalink: /work/couchballs
 featured_img: couchballs.gif
 workimages:

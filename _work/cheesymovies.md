@@ -1,6 +1,8 @@
 ---
 layout: work
 title: Cheesy movies
+description: Illustrations for the cover and May of the annual riso calendar featuring various artists, published by Black Matter Editions
+image: /assets/img/work-page-images/cheesymovies02.png
 permalink: /work/cheesymovies
 featured_img: cheesymovies.jpg
 workimages:
