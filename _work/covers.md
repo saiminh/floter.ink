@@ -6,11 +6,12 @@ featured_img: covers.jpg
 workimages:
  - src: covers_ducks.jpg
  - src: covers_imposter.jpg
+ - src: covers_room9.jpg
 bgcolor: decfc0
 bordercolor: "ffffff"
 order: 8
 ---
 
-# Vintage covers
+# Pulp magazine covers
 
-Playing around with color halftone raster effects to achieve that vintage pulp magazine look. 
+Color halftone raster effects. 
