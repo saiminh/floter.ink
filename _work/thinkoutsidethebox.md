@@ -4,7 +4,7 @@ title: Outside the box
 permalink: /work/thinker
 featured_img: thinking_600x600.png
 bgcolor: EDB18D
-order: 7
+order: 13
 ---
 
 # To think outside the box

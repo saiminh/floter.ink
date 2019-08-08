@@ -13,7 +13,7 @@ workimages:
 - src: greetingcards04_easter.png
   caption: Happy Easter
 bgcolor: fd9937
-order: 16
+order: 1
 ---
 
 # Greeting cards

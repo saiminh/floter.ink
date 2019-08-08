@@ -97,6 +97,13 @@ a {
 
 $worklist-spacing: 10px;
 
+body.work .work_list {
+	position: fixed;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
 .work_list {
 	margin-top: 60px;
 	padding: $worklist-spacing;

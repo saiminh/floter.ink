@@ -13,7 +13,7 @@ workimages:
 - src: wildhunt_04.png
   caption: Dutchman in blackface
 bgcolor: cf4035
-order: 11
+order: 7
 ---
 
 # Of ravens and racism 

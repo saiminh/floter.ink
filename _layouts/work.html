@@ -3,10 +3,13 @@
   
   {%- include head.html -%}
 
-  <body class="{{page.layout}}" style="background-color: #{{page.bgcolor}}">
-    {%- include preloader.html -%}
+  <body class="{{page.layout}}">
     {%- include header.html -%}
-    <main class="page-content" aria-label="Content">
+    <main id="swup" class="page-content" aria-label="Content">
+      <style type="text/css">
+        body { transition: all .2s linear; background-color: #{{page.bgcolor}};}
+      </style>
+      {%- include preloader.html -%}
       <div class="wrapper">
         
         <div class="work_page_gallery">
@@ -83,6 +86,7 @@
 
       </div>
     </main>
+    {%- include work-list.html -%}
     {%- include footer.html -%}
 
 

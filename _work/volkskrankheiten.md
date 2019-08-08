@@ -14,7 +14,7 @@ workimages:
   caption: Borderine personality disorder
 bgcolor: fbc95b
 bordercolor: 111
-order: 1
+order: 16
 ---
 
 # Volkskrankheiten
