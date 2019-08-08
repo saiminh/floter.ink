@@ -36,10 +36,11 @@ function init() {
         onComplete: function(){
             $(".la-anim-13").removeClass("la-animate");
             $(".preloader").remove();
+            $("body").addClass("assets_loaded");
         }
     });
 
-    $("body").addClass("assets_loaded");
+    
 
 };
 
