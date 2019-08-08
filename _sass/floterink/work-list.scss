@@ -97,10 +97,13 @@ a {
 
 $worklist-spacing: 10px;
 
-body.work .work_list {
+body.work .work_list,
+body.about .work_list {
+	//hiding the work list 
 	position: fixed;
 	top: 0;
 	opacity: 0;
+	z-index: -1;
 	visibility: hidden;
 }
 

@@ -25,8 +25,8 @@
                   <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
                    {% endif %}
                 {% else %}
-                <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images"
-                {% if page.bordercolor %} style="border: 1vh solid #{{page.bordercolor}}" {% endif %} />
+                <img src="/assets/img/work-page-images/{{item.src}}" width="100" height="{{item.ratio}}" class="work_page_images"
+                style="{% if page.bordercolor %} border: 1vh solid #{{page.bordercolor}}; {% endif %}" />
                  {% if item.caption %}
                 <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
                  {% endif %}

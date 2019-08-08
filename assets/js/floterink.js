@@ -18,6 +18,7 @@ function moveLeft() {
 };
 
 function init() {
+    $(window).scrollTop(0);
     $(".la-anim-13").addClass("la-animate");
     slideCount = $('.work_page_gallery figure').length;
     counter = 1;
@@ -30,18 +31,17 @@ function init() {
     $('.work_page_gallery figure, .multislide-ui').on('click', function(){
         moveLeft();
     });
-
+    TweenLite.set(".preloader", {
+        autoAlpha: 1
+    });
     TweenLite.to(".preloader", 1, {
         autoAlpha:0,
         onComplete: function(){
             $(".la-anim-13").removeClass("la-animate");
-            $(".preloader").remove();
+            //$(".preloader").remove();
             $("body").addClass("assets_loaded");
         }
-    });
-
-    
-
+    }, 3);    
 };
 
 jQuery(document).ready(function ($) {
@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
 
 });    
 $(window).on('load', function(){  
-    
+    init();
     /*TweenMax.staggerFromTo(".col-4, .col-6, .col-12, .col-8", .5, {
         autoAlpha: 0,
         y: -60

@@ -6,6 +6,7 @@ featured_img: wildhunt.png
 workimages:
 - src: wildhunt_03.png
   caption: Odin and Sinterklaas... Same person?
+  ratio: 53
 - src: wildhunt_01.png
   caption: Odins wild hunt is probably the origin of Santa 
 - src: wildhunt_02.png
