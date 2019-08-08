@@ -41,7 +41,11 @@ function init() {
             //$(".preloader").remove();
             $("body").addClass("assets_loaded");
         }
-    }, 3);    
+    });    
+    TweenLite.from(".work_page_figure, .page_content_text", 1.5,  {
+        opacity:0, 
+        delay: .5
+    });
 };
 
 jQuery(document).ready(function ($) {
@@ -54,15 +58,5 @@ jQuery(document).ready(function ($) {
     swup.on('contentReplaced', init);
 
 });    
-$(window).on('load', function(){  
-    init();
-    /*TweenMax.staggerFromTo(".col-4, .col-6, .col-12, .col-8", .5, {
-        autoAlpha: 0,
-        y: -60
-    },{              
-        autoAlpha: 1,
-        y: 0,
-        ease: Back.easeOut.config( 1.7)
-    }, .05);*/
-    
+$(window).on('load', function(){      
 });

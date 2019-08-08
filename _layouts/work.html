@@ -7,7 +7,7 @@
     {%- include header.html -%}
     <main id="swup" class="page-content" aria-label="Content">
       <style type="text/css">
-        body { transition: all .2s linear; background-color: #{{page.bgcolor}};}
+        body {background-color: #{{page.bgcolor}};}
       </style>
       {%- include preloader.html -%}
       <div class="wrapper">
@@ -25,7 +25,7 @@
                   <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
                    {% endif %}
                 {% else %}
-                <img src="/assets/img/work-page-images/{{item.src}}" width="100" height="{{item.ratio}}" class="work_page_images"
+                <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images"
                 style="{% if page.bordercolor %} border: 1vh solid #{{page.bordercolor}}; {% endif %}" />
                  {% if item.caption %}
                 <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
