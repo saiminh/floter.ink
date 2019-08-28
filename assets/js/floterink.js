@@ -19,7 +19,7 @@ function moveLeft() {
 
 function init() {
     $(window).scrollTop(0);
-    $(".la-anim-13").addClass("la-animate");
+    //$(".la-anim-13").addClass("la-animate");
     slideCount = $('.work_page_gallery figure').length;
     counter = 1;
     
@@ -42,20 +42,169 @@ function init() {
             $("body").addClass("assets_loaded");
         }
     });    
-    TweenLite.from(".work_page_figure, .page_content_text", 1.5,  {
+   /* TweenLite.from(".work_page_figure, .page_content_text", 1.5,  {
         opacity:0, 
         delay: .5
-    });
+    });*/
 };
 
 jQuery(document).ready(function ($) {
+    
+    const options = [
+      {
+        from: '/', to: '/work/:id',
+        in: function(next) {
+            TweenLite.set("#swup", {
+              autoAlpha: 0,
+              y: "100vh"
+            })
+            TweenLite.to("#swup", .75, {
+              autoAlpha: 1,
+              y: 0,
+              onComplete: next,
+              ease:  Expo.easeInOut
+            })
+        },
+        out: (next) => {
+            TweenLite.set(".work_list", {
+                autoAlpha: 1,
+                y: 0
+            })
+            TweenLite.to(".work_list", .75, {
+                autoAlpha: 0,
+                y: "100vh",
+                onComplete: next,
+                ease:  Expo.easeInOut
+            })
+            
+        }
+      },
+      {
+        from: '/work/:id', to: '/',
+        in: function(next) {
+            TweenLite.set(".work_list", {
+                autoAlpha: 0,
+                y: "100vh"
+            })
+            TweenLite.to(".work_list", 1, {
+                autoAlpha: 1,
+                y: "0",
+                onComplete: next,
+                ease:  Expo.easeInOut
+            })
+        },
+        out: (next) => {            
+            TweenLite.set("#swup", {
+              y: 0,
+              autoAlpha: 1
+            })
+            TweenLite.to("#swup", .75, {
+              y: "100vh",
+              autoAlpha: 0,
+              onComplete: next,
+              ease:  Expo.easeInOut
+            })  
+        }
+      },
+      {
+        from: '/work/:id', to: '/work/:id',
+        in: function(next) {
+            TweenLite.set("#swup .work_page_figure", {
+                autoAlpha: 0
+            })
+            TweenLite.to("#swup .work_page_figure", .75, {
+                autoAlpha: 1,
+                ease:  Expo.easeInOut
+            })
+            TweenLite.set(".page_content_text", {
+                x: 200,
+                autoAlpha: 0
+            })
+            TweenLite.to(".page_content_text", .75, {
+                delay: .5,
+                x: 0,
+                autoAlpha: 1,
+                ease:  Expo.easeInOut,
+                onComplete: next
+            })
+        },
+        out: (next) => {
+            TweenLite.set("#swup .work_page_figure", {
+                autoAlpha: 1
+            })
+            TweenLite.to("#swup .work_page_figure", .75, {
+                autoAlpha: 0,
+                ease:  Expo.easeInOut
+            })
+            TweenLite.set(".page_content_text", {
+                x: 0,
+                autoAlpha: 1
+            })
+            TweenLite.to(".page_content_text", .75, {
+                delay: .5,
+                x: -200,
+                autoAlpha: 0,
+                ease:  Expo.easeInOut,
+                onComplete: next
+            })
+        }
+      },
+      {
+        from: '/work/:id', to: 'back-transition',
+        in: function(next) {
+            TweenLite.set("#swup .work_page_figure", {
+                autoAlpha: 0
+            })
+            TweenLite.to("#swup .work_page_figure", .75, {
+                autoAlpha: 1
+            })
+            TweenLite.set(".page_content_text", {
+                x: -200,
+                autoAlpha: 0
+            })
+            TweenLite.to(".page_content_text", .75, {
+                delay: .5,
+                x: 0,
+                autoAlpha: 1,
+                ease:  Expo.easeInOut,
+                onComplete: next
+            })
+            
+        },
+        out: (next) => {
+            TweenLite.set("#swup .work_page_figure", {
+                autoAlpha: 1
+            })
+            TweenLite.to("#swup .work_page_figure", .75, {
+                autoAlpha: 0,
+            })
+             TweenLite.set(".page_content_text", {
+                x: 0
+            })
+            TweenLite.to(".page_content_text", .75, {
+                delay: .5,
+                x: 200,
+                autoAlpha: 0,
+                ease:  Expo.easeInOut,
+                onComplete: next
+            })
+        }
+      }
+    ];
+
     const swup = new Swup({
       plugins: [
-        new SwupBodyClassPlugin()
+        new SwupBodyClassPlugin(),
+        new SwupJsPlugin(options)
       ]
     });
     init();
     swup.on('contentReplaced', init);
+
+    
+
+    
+
 
 });    
 $(window).on('load', function(){      

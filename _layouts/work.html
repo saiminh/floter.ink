@@ -9,45 +9,66 @@
       <style type="text/css">
         body {background-color: #{{page.bgcolor}};}
       </style>
-      {%- include preloader.html -%}
+    {%- include preloader.html -%}
       <div class="wrapper">
         
-        <div class="work_page_gallery">
-        {% if page.workimages %}
-          {% for item in page.workimages %}
-            {% if forloop.first == true %}
-              <figure class="work_page_figure work_page_figure--first">
-                {% if item.include %}
-                  <div class="work_page_include">
-                  {%- include {{ item.include }} -%}
-                  </div>
-                   {% if item.caption %}
-                  <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
-                   {% endif %}
-                {% else %}
-                <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images"
-                style="{% if page.bordercolor %} border: 1vh solid #{{page.bordercolor}}; {% endif %}" />
-                 {% if item.caption %}
-                <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
-                 {% endif %}
-                 {% endif %}
-              </figure>
-              <div class="page_content_text">
-                {{ content }}
-              </div>
-              
-            {% else %}
-          <figure class="work_page_figure">
-            <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images"
-            {% if page.bordercolor %} style="border: 1vh solid #{{page.bordercolor}}" {% endif %} />
-             {% if item.caption %}
+      <div class="work_page_gallery">
+
+{% comment %}In case there are workimages in YAML {% endcomment %}      
+      {% if page.workimages %} 
+      {% for item in page.workimages %}
+        
+        {% if forloop.first == true %}
+        
+        <figure class="work_page_figure work_page_figure--first">
+
+{% comment %} Is there an include eg hypnopig {% endcomment %}          
+          {% if item.include %} 
+         
+            <div class="work_page_include">
+              {%- include {{ item.include }} -%}
+            </div>
+            
+            {% if item.caption %}
             <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
-             {% endif %}
-          </figure>
             {% endif %}
-          {% endfor %}
-          </div>
+
+{% comment %} If page has NO include {% endcomment %}         
+          {% else %} 
+         
+            <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images" 
+            style="{% if page.bordercolor %} border: 1vh solid #{{page.bordercolor}}; {% endif %}" />
+          
+            {% if item.caption %}
+            <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
+            {% endif %}
+        
+          {% endif %}
+        
+        </figure>
+        <div class="page_content_text">
+          {{ content }}
+        </div>        
+        
         {% else %}
+        
+        <figure class="work_page_figure">
+          <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images" 
+          {% if page.bordercolor %} style="border: 1vh solid #{{page.bordercolor}}" {% endif %} />
+                
+          {% if item.caption %}
+          <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
+          {% endif %}
+
+        </figure>
+      
+      {% endif %}
+      {% endfor %}
+      
+      </div>
+
+{% comment %} In Case there's NO workimgs specified in YAML only display the featured image {% endcomment %}
+    {% else %} 
           <figure class="work_page_figure">
             <img src="/assets/img/work-featuredimg/{{page.featured_img}}" class="work_page_images work_page_images_featuredimage" />             
           </figure>
@@ -55,7 +76,7 @@
           <div class="page_content_text">
             {{ content }}
           </div>
-        {% endif %}
+    {% endif %}
         
 
         {% if page.collection %}
@@ -75,7 +96,7 @@
         {% endfor %}
 
         <ul class="prevnext">
-          <li>{% if prev %}<a class="prev" href="{{ prev.url}}">{% include arrow.svg %}</a>
+          <li>{% if prev %}<a class="prev" href="{{ prev.url}}" data-swup-transition="back-transition">{% include arrow.svg %}</a>
               {% else %}<a class="prev disabled" href="">{% include arrow.svg %}</a>
               {% endif %}</li>
           <li><a class="overview" href="{{ '/' | relative_url }}">all projects</a></li>
