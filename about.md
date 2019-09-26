@@ -6,7 +6,7 @@ permalink: /about/
 
 # Simon Flöter
 
-Simon is a German artist based in Amsterdam, the Netherlands.
+Simon is a German artist and [designer](http://floter.design) based in Amsterdam, the Netherlands.
 
 His bold style is a result of consuming unhealthy amounts of cartoons and comics, violent videogames, psychedelic music and scifi movies.
 
