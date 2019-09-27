@@ -1,7 +1,7 @@
 ---
 layout: work
 title: Seattle Theater Company
-permalink: /work/in-the-club
+permalink: /work/stg
 featured_img: stg.png
 workimages:
   - src: stg_sonvolt-poster.png
