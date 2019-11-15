@@ -85,6 +85,3 @@ DEPENDENCIES
   jekyll-responsive-image
   jekyll-seo-tag (~> 2.1)
   tzinfo-data
-
-BUNDLED WITH
-   2.0.2
