@@ -1,5 +1,4 @@
 <div id="work_list" class="nowrapper">
-<!-- 	<h3 id="work_examples" class="work_list_title">Recent Work</h3> -->
 	<div class="row work_list">
 		{% assign sorted_work = site.work | sort:"order" | reverse %}
 		{% for work in sorted_work %}
@@ -7,13 +6,14 @@
 				
 				<div class="work_list_tile work_list_tile_{{ work.title | remove: " " | remove: "." }} {{ work.worktile_theme }}">
 					<a href="{{ work.permalink }}">
-					<div class="work_list_tile_thumb"> 
-						<img class="work_list_tile_thumb_img" src="/assets/img/work-featuredimg/{{ work.featured_img }}" />
+					<div class="work_list_tile_thumb">
+                      {% responsive_image_block %}
+                      path: assets/img/work-featuredimg/{{ work.featured_img }}
+                      {% endresponsive_image_block %}
 					</div>	       					
 			      
 			      	<header class="work_list_tile_header">				      	
 				      	<h4 class="work_list_tile_title">{{ work.title }}</h4>
-				      	<!-- <p class="work_list_tile_subtitle">- view project -</p> -->
 				    </header>
 				    </a>				    
 			    </div>

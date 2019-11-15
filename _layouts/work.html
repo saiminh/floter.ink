@@ -5,10 +5,7 @@
 
   <body class="{{page.layout}}">
     {%- include header.html -%}
-    <main id="swup" class="page-content" aria-label="Content">
-      <style type="text/css">
-        body {background-color: #{{page.bgcolor}};}
-      </style>
+    <main id="swup" class="page-content" aria-label="Content">      
     {%- include preloader.html -%}
       <div class="wrapper">
         
@@ -34,11 +31,12 @@
             {% endif %}
 
 {% comment %} If page has NO include {% endcomment %}         
-          {% else %} 
-         
-            <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images" 
-            style="{% if page.bordercolor %} border: 1vh solid #{{page.bordercolor}}; {% endif %}" />
-          
+          {% else %}             
+            {% responsive_image_block %}
+              path: assets/img/work-page-images/{{item.src}} 
+              alt: {{ item.caption }} 
+            {% endresponsive_image_block %}
+            
             {% if item.caption %}
             <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
             {% endif %}
@@ -53,8 +51,11 @@
         {% else %}
         
         <figure class="work_page_figure">
-          <img src="/assets/img/work-page-images/{{item.src}}" class="work_page_images" 
-          {% if page.bordercolor %} style="border: 1vh solid #{{page.bordercolor}}" {% endif %} />
+         
+          {% responsive_image_block %}
+            path: assets/img/work-page-images/{{item.src}} 
+            alt: {{ item.caption }} 
+          {% endresponsive_image_block %}
                 
           {% if item.caption %}
           <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
@@ -70,7 +71,11 @@
 {% comment %} In Case there's NO workimgs specified in YAML only display the featured image {% endcomment %}
     {% else %} 
           <figure class="work_page_figure">
-            <img src="/assets/img/work-featuredimg/{{page.featured_img}}" class="work_page_images work_page_images_featuredimage" />             
+            {% responsive_image_block %}
+              path: assets/img/work-featuredimg/{{page.featured_img}} 
+              alt: {{ item.caption }} 
+            {% endresponsive_image_block %}
+            <!-- <img src="/assets/img/work-featuredimg/{{page.featured_img}}" class="work_page_images work_page_images_featuredimage" />              -->
           </figure>
           </div>
           <div class="page_content_text">

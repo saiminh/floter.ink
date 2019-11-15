@@ -333,7 +333,7 @@ body.about .work_list {
 	}
 }
 
-.work_page_images {
+.work_page_figure > img {
 	width: auto;
 	height: auto;
 	margin: 0;
@@ -347,10 +347,10 @@ body.about .work_list {
 	}
 }
 
-.work_page_images_featuredimage {
-	border: 10px solid #000;
-	box-sizing: border-box;
-}
+// .work_page_images_featuredimage {
+// 	border: 10px solid #000;
+// 	box-sizing: border-box;
+// }
 
 .work_page_include {
 
