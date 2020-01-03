@@ -200,10 +200,26 @@ jQuery(document).ready(function ($) {
     });
     init();
     swup.on('contentReplaced', init);
-
-    
-
-    
+    swup.on('animationSkipped', function(){
+        TweenLite.set(".work_list", {
+            autoAlpha: 0,
+            y: "100vh"
+        })
+        TweenLite.to(".work_list", 1, {
+            autoAlpha: 1,
+            y: "0",  
+            ease:  Expo.easeInOut
+        })
+        TweenLite.set("#swup", {
+            y: 0,
+            autoAlpha: 1
+          })
+          TweenLite.to("#swup", .75, {
+            y: "100vh",
+            autoAlpha: 0,
+            ease:  Expo.easeInOut
+          })
+    });
 
 
 });    

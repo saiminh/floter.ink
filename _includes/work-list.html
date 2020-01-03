@@ -7,11 +7,20 @@
 				<div class="work_list_tile work_list_tile_{{ work.title | remove: " " | remove: "." }} {{ work.worktile_theme }}">
 					<a href="{{ work.permalink }}">
 					<div class="work_list_tile_thumb">
-                      {% responsive_image_block %}
-                      path: assets/img/work-featuredimg/{{ work.featured_img }}
-                      {% endresponsive_image_block %}
+{% if forloop.index == 1 or forloop.index == 2 or forloop.index == 6 %}
+{% assign sizes = "(min-width:1200px) 40vw, 50vw" %}
+{% elsif forloop.index == 13 or forloop.index == 15 %}
+{% assign sizes = "(min-width:1200px) 40vw, (min-width:800px) 25vw, 50vw" %}
+{% else %}
+{% assign sizes = "(min-width:800px) 25vw, (min-width:1200px) 20vw, 50vw" %}
+{% endif %}
+{% capture path %} assets/img/work-featuredimg/{{ work.featured_img }} {% endcapture %}
+{% responsive_image_block %}
+path: {{ path }}
+sizes: {{ sizes }}
+{% endresponsive_image_block %}
 					</div>	       					
-			      
+				  					
 			      	<header class="work_list_tile_header">				      	
 				      	<h4 class="work_list_tile_title">{{ work.title }}</h4>
 				    </header>
