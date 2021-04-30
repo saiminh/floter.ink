@@ -9,7 +9,6 @@
   // Positioning context for the mobile navigation icon
   position: relative;
 }
-
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
@@ -17,26 +16,38 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-
   &,
   &:visited {
     color: $grey-color-dark;
   }
 }
-
 .site-nav {
-  float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
+  margin: 15px $spacing-unit;
+  position: fixed;
+  right: 0;
+  z-index: 11;
+  @media (min-width: 800px) {
+    right: 5px;
+  }
+  & a {
+    width: 40px;
+    margin-left: 10px;
+    display: inline-block;
+    & svg {
+      width: 100%;
+    }
+  }
 
-  .nav-trigger {
+  & .nav-trigger {
       display: none;
   }
 
-  .menu-icon {
+  & .menu-icon {
     display: none;
   }
 
-  .page-link {
+  & .page-link {
     color: $text-color;
     line-height: $base-line-height;
 
@@ -99,9 +110,6 @@
     }
   }
 }
-
-
-
 /**
  * Site footer
  */
@@ -178,6 +186,7 @@
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
+  overflow: hidden;
 }
 
 .page-heading {

@@ -19,7 +19,6 @@ function moveLeft() {
 
 function init() {
     $(window).scrollTop(0);
-    //$(".la-anim-13").addClass("la-animate");
     slideCount = $('.work_page_gallery figure').length;
     counter = 1;
     
@@ -42,41 +41,31 @@ function init() {
             $("body").addClass("assets_loaded");
         }
     });    
-   /* TweenLite.from(".work_page_figure, .page_content_text", 1.5,  {
-        opacity:0, 
-        delay: .5
-    });*/
 };
 
 jQuery(document).ready(function ($) {
-    
     const options = [
       {
         from: '/', to: '/work/:id',
         in: function(next) {
             TweenLite.set("#swup", {
               autoAlpha: 0,
-              y: "100vh"
             })
-            TweenLite.to("#swup", .75, {
+            TweenLite.to("#swup", .5, {
               autoAlpha: 1,
-              y: 0,
               onComplete: next,
-              ease:  Expo.easeInOut
+              ease: Expo.easeInOut
             })
         },
         out: (next) => {
             TweenLite.set(".work_list", {
                 autoAlpha: 1,
-                y: 0
             })
-            TweenLite.to(".work_list", .75, {
+            TweenLite.to(".work_list", .5, {
                 autoAlpha: 0,
-                y: "100vh",
                 onComplete: next,
-                ease:  Expo.easeInOut
+                ease: Expo.easeInOut
             })
-            
         }
       },
       {
@@ -84,22 +73,18 @@ jQuery(document).ready(function ($) {
         in: function(next) {
             TweenLite.set(".work_list", {
                 autoAlpha: 0,
-                y: "100vh"
             })
             TweenLite.to(".work_list", 1, {
                 autoAlpha: 1,
-                y: "0",
                 onComplete: next,
                 ease:  Expo.easeInOut
             })
         },
         out: (next) => {            
             TweenLite.set("#swup", {
-              y: 0,
               autoAlpha: 1
             })
             TweenLite.to("#swup", .75, {
-              y: "100vh",
               autoAlpha: 0,
               onComplete: next,
               ease:  Expo.easeInOut
@@ -121,7 +106,7 @@ jQuery(document).ready(function ($) {
                 autoAlpha: 0
             })
             TweenLite.to(".page_content_text", .75, {
-                delay: .5,
+                delay: .25,
                 x: 0,
                 autoAlpha: 1,
                 ease:  Expo.easeInOut,
@@ -141,7 +126,7 @@ jQuery(document).ready(function ($) {
                 autoAlpha: 1
             })
             TweenLite.to(".page_content_text", .75, {
-                delay: .5,
+                delay: .25,
                 x: -200,
                 autoAlpha: 0,
                 ease:  Expo.easeInOut,

@@ -4,10 +4,11 @@
   {%- include head.html -%}
 
   <body class="{{page.layout}}">
+    <div class="wrapper">
     {%- include header.html -%}
     <main id="swup" class="page-content" aria-label="Content">      
     {%- include preloader.html -%}
-      <div class="wrapper">
+      <div class="view">
         
       <div class="work_page_gallery">
 
@@ -113,6 +114,7 @@
       </div>
     </main>
     {%- include work-list.html -%}
+  </div>
     {%- include footer.html -%}
 
 

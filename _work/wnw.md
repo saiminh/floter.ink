@@ -4,11 +4,12 @@ title: WorkingNotWorking
 permalink: /work/wnw
 featured_img: wnw.png
 workimages:
-- src: WNW01.png
-- src: WNW02.png
+- src: wnw-1.jpg
+- src: wnw-2.jpg
+- src: wnw-3.jpg
 order: 21
 ---
 
-# The Bad Physics of Meritocracy
+# Working Not Working Magazine
 Client: [WorkingNotWorking Magazine](https://magazine.workingnotworking.com/magazine/the-bad-physics-of-meritocracy)\\
-Hero illustration for this fantastic article about Meritocracy in the creative industry by [Danielle Evans](https://twitter.com/marmaladebleue). 
+Editorial illustrations for one of the leading online publications of the creative industry. 

@@ -4,13 +4,16 @@
   {%- include head.html -%}
 
   <body class="{{page.layout}}">
-  	{%- include preloader.html -%}
-    {%- include header.html -%}
-    <main id="swup" aria-label="Content">
-    
-    </main>	
-    {%- include work-list.html -%}
-	{%- include footer.html -%}
+    <div class="wrapper">
+      {%- include preloader.html -%}
+      <div class="view">
+        {%- include header.html -%}
+        <main id="swup" aria-label="Content">
+        </main>	
+        {%- include work-list.html -%}
+      </div>
+      {%- include footer.html -%}
+    </div>
   </body>
 
 </html>

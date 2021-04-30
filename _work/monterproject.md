@@ -14,4 +14,4 @@ order: 17
 
 # themonsterproject.org
 
-Kids draw monsters, then artists from all over the world recreate them in their own styles.
+Kids draw monsters, then artists from all over the world re-create them in their own styles.
